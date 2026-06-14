@@ -342,10 +342,23 @@
     .hero::after{width:100%;background-position:center bottom;background-size:cover;opacity:.4}
     .hero::before{background:
       linear-gradient(180deg, rgba(13,10,7,.82) 0%, rgba(13,10,7,.55) 45%, rgba(13,10,7,.5) 70%, rgba(58,26,34,.5) 100%)}
-    .apply-btn{padding:1.1rem 1rem}
-    .apply-btn .ab-date{font-size:1.15rem;white-space:nowrap}
-    .apply-btn .ab-sub{font-size:.9rem}
-    .apply-btn .ab-cta{font-size:1.15rem;padding-left:.8rem}
+    /* 신청 카드: 모바일에서 위(날짜·장소) / 아래(신청하기) 2층 구조 */
+    .apply-btn{flex-direction:column;align-items:stretch;gap:.55rem;padding:1rem 1.1rem;text-align:center}
+    .apply-btn .ab-left{flex-direction:row;flex-wrap:nowrap;justify-content:center;align-items:baseline;gap:.2rem .5rem}
+    .apply-btn .ab-date{font-size:1.1rem;white-space:nowrap}
+    .apply-btn .ab-sub{font-size:.86rem;white-space:nowrap}
+    .apply-btn .ab-cta{
+      flex-direction:row;justify-content:center;align-items:baseline;gap:.5rem;
+      font-size:1.1rem;padding-left:0;padding-top:.55rem;
+      border-left:none;border-top:1px solid rgba(35,24,3,.3);
+    }
+    .apply-btn .ab-confirm{font-size:.8rem}
+    /* 입금 계좌 · 연락처: 세로 정렬 + 값 글자 축소 + 박스 밖으로 안 튀게 */
+    .apply-row{flex-direction:column;align-items:flex-start;gap:.35rem;padding:.9rem 1.1rem}
+    .apply-row .k{min-width:0;font-size:.78rem}
+    .apply-row .v{font-size:1.08rem;line-height:1.45;word-break:keep-all;overflow-wrap:break-word;max-width:100%}
+    .apply-row .v span{font-size:.9rem!important}
+    .apply-row .v .acct-holder{display:block}
   }
   @media(prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important;scroll-behavior:auto}
@@ -595,7 +608,7 @@
         </div>
         <div class="apply-row">
           <span class="k">입금 계좌</span>
-          <span class="v">신한은행 010-4893-2468 <span style="font-size:1.05rem;color:var(--cream-dim)">(예금주: 그랜드아트뮤직)</span></span>
+          <span class="v"><span style="white-space:nowrap">신한은행 010-4893-2468</span> <span class="acct-holder" style="font-size:1.05rem;color:var(--cream-dim)">(예금주: 그랜드아트뮤직)</span></span>
         </div>
       </div>
 
