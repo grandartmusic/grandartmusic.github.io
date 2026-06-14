@@ -1,3 +1,6 @@
+# ===== 사이트맵 위치 =====
+Sitemap: https://grandartmusic.com/sitemap.xml
+
 # ===== 일반 검색엔진은 허용 (네이버·구글 검색 노출 유지) =====
 User-agent: Googlebot
 Allow: /
