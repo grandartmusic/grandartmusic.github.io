@@ -255,7 +255,14 @@
   .apply-row .k{font-family:'Cormorant Garamond',serif;letter-spacing:.16em;text-transform:uppercase;font-size:.95rem;color:var(--gold-soft);min-width:104px}
   .apply-row .v{font-size:1.45rem;color:var(--cream);font-weight:500}
   .apply-row .v a{color:var(--gold-bright)}
-  .apply-note{font-size:.82rem;color:var(--cream-dim);margin-top:1.4rem;line-height:1.7}
+  .apply-note{font-size:.82rem;color:var(--cream-dim);margin-top:1.4rem;line-height:1.7;text-align:left}
+  /* 신청 방법 단계 */
+  .apply-steps{background:rgba(13,10,7,.5);border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem 1.8rem;margin:1.6rem 0 2.2rem;text-align:left;display:grid;gap:1rem}
+  .apply-step{display:flex;align-items:flex-start;gap:.9rem}
+  .apply-step .num{font-family:'Noto Sans KR',sans-serif;font-size:1.15rem;color:var(--gold-bright);flex-shrink:0;line-height:1.5}
+  .apply-step .txt{font-family:'Gowun Batang',serif;font-size:1.08rem;color:var(--cream);line-height:1.5}
+  .apply-step .txt a{color:var(--gold-bright)}
+  .apply-sub-title{font-family:'Cormorant Garamond',serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bright);font-size:1.15rem;text-align:center;margin:2.4rem 0 1rem}
   .apply-sched{display:grid;gap:.6rem;margin:0 auto 2rem;max-width:520px;text-align:left}
   .apply-sched .as-row{display:flex;align-items:center;gap:.9rem;padding:.85rem 1.2rem;background:rgba(13,10,7,.5);border:1px solid var(--line);border-radius:var(--radius)}
   .apply-sched .as-date{font-family:'Gowun Batang',serif;font-weight:700;color:var(--gold-bright);font-size:1.05rem;white-space:nowrap;min-width:108px}
@@ -266,7 +273,8 @@
   .apply-btn .ab-left{display:flex;flex-direction:column;gap:.2rem;flex:1;align-items:center;text-align:center}
   .apply-btn .ab-date{font-size:1.45rem;font-weight:700;font-family:'Gowun Batang',serif}
   .apply-btn .ab-sub{font-size:1.05rem;font-weight:700;opacity:.9}
-  .apply-btn .ab-cta{font-size:1.4rem;font-weight:700;font-family:'Gowun Batang',serif;white-space:nowrap;border-left:1px solid rgba(35,24,3,.35);padding-left:1.1rem}
+  .apply-btn .ab-cta{font-size:1.4rem;font-weight:700;font-family:'Gowun Batang',serif;white-space:nowrap;border-left:1px solid rgba(35,24,3,.35);padding-left:1.1rem;display:flex;flex-direction:column;align-items:center;gap:.2rem}
+  .apply-btn .ab-confirm{font-family:'Noto Sans KR',sans-serif;font-size:.9rem;font-weight:400;opacity:.78;white-space:nowrap}
 
   /* ---------- NOTICE ---------- */
   #notice{background:linear-gradient(180deg,#14100b,#1c1410)}
@@ -516,19 +524,19 @@
       <span class="latin-sm">Apply</span>
     </div>
     <div class="apply-card reveal">
-      <p class="lead">아래 방법으로 참가를 신청하실 수 있습니다.</p>
-
-      <p class="apply-sched-title">원하시는 경연일을 선택해 신청하세요</p>
-      <!-- 온라인 신청 버튼: 각 구글 폼이 준비되면 href="#" 부분만 해당 날짜의 폼 주소로 교체하세요 -->
-      <div class="apply-btns">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSmWG9FjOcQwlQQPVX_mc_ZHh7xY7mz8vf3jpaXJMdnqgeMA/viewform" target="_blank" rel="noopener" class="btn btn-gold apply-btn"><span class="ab-left"><span class="ab-date">9월 19일 (토)</span><span class="ab-sub">수원 진아트센터</span></span><span class="ab-cta">신청하기 →</span></a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqaaPMirwYGt8TRSFDcdV0i1Cm19WE6j-6A-S6iQ9dAGQbPA/viewform" target="_blank" rel="noopener" class="btn btn-gold apply-btn"><span class="ab-left"><span class="ab-date">11월 21일 (토)</span><span class="ab-sub">경기문화재단 아트홀</span></span><span class="ab-cta">신청하기 →</span></a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7aOo0lsrqsFA9eOreSX8nPrWupcRUkd3OssORLCi_5t_txg/viewform" target="_blank" rel="noopener" class="btn btn-gold apply-btn"><span class="ab-left"><span class="ab-date">12월 20일 (일)</span><span class="ab-sub">수원 진아트센터</span></span><span class="ab-cta">신청하기 →</span></a>
+      <!-- 신청 방법 ①~④ -->
+      <p class="apply-sub-title" style="margin-top:0">참가 신청 방법</p>
+      <div class="apply-steps">
+        <div class="apply-step"><span class="num">①</span><span class="txt">경연 일자 선정</span></div>
+        <div class="apply-step"><span class="num">②</span><span class="txt">전화·문자 또는 아래 온라인 신청</span></div>
+        <div class="apply-step"><span class="num">③</span><span class="txt">참가비(참가 요강 참조) 입금</span></div>
+        <div class="apply-step"><span class="num">④</span><span class="txt">입금 후 전화·문자 확인 (접수 완료)</span></div>
       </div>
 
+      <!-- 연락처 · 입금 계좌 -->
       <div class="apply-rows">
         <div class="apply-row">
-          <span class="k">접수 · 문자</span>
+          <span class="k">접수 신청</span>
           <span class="v"><a href="tel:01048932468">010-4893-2468</a></span>
         </div>
         <div class="apply-row">
@@ -537,9 +545,17 @@
         </div>
       </div>
 
+      <!-- 온라인 신청 (날짜 선택) -->
+      <p class="apply-sub-title">온라인 신청</p>
+      <!-- 온라인 신청 버튼: 각 구글 폼이 준비되면 href 부분만 해당 날짜의 폼 주소로 교체하세요 -->
+      <div class="apply-btns">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSmWG9FjOcQwlQQPVX_mc_ZHh7xY7mz8vf3jpaXJMdnqgeMA/viewform" target="_blank" rel="noopener" class="btn btn-gold apply-btn"><span class="ab-left"><span class="ab-date">9월 19일 (토)</span><span class="ab-sub">수원 진아트센터</span></span><span class="ab-cta">신청하기 →<span class="ab-confirm">작성 후 전화·문자 확인</span></span></a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqaaPMirwYGt8TRSFDcdV0i1Cm19WE6j-6A-S6iQ9dAGQbPA/viewform" target="_blank" rel="noopener" class="btn btn-gold apply-btn"><span class="ab-left"><span class="ab-date">11월 21일 (토)</span><span class="ab-sub">경기문화재단 아트홀</span></span><span class="ab-cta">신청하기 →<span class="ab-confirm">작성 후 전화·문자 확인</span></span></a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7aOo0lsrqsFA9eOreSX8nPrWupcRUkd3OssORLCi_5t_txg/viewform" target="_blank" rel="noopener" class="btn btn-gold apply-btn"><span class="ab-left"><span class="ab-date">12월 20일 (일)</span><span class="ab-sub">수원 진아트센터</span></span><span class="ab-cta">신청하기 →<span class="ab-confirm">작성 후 전화·문자 확인</span></span></a>
+      </div>
+
       <p class="apply-note">
-        ※ 참가 접수는 전화·문자 또는 위 온라인 신청서로 접수하시고, 참가비를 입금하시면 접수가 완료됩니다.<br>
-        매 대회 신청 마감일은 공지사항을 확인해 주세요.
+        ※ 참가 접수는 전화·문자 또는 온라인 신청서로 신청하시고, 참가비를 입금한 뒤 전화·문자로 확인하시면 접수가 완료됩니다. 매 대회 신청 마감일은 공지사항을 확인해 주세요.
       </p>
     </div>
   </div>
