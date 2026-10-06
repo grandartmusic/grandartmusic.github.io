@@ -153,10 +153,10 @@
   }
   .hero-cta{display:flex;gap:1rem;margin-top:2.6rem;flex-wrap:wrap;animation:fade 1s ease .5s both}
   .hero-sched{list-style:none;margin-top:2rem;display:grid;gap:.55rem;animation:fade 1s ease .42s both}
-  .hero-sched li{display:flex;align-items:center;gap:.9rem;font-size:.98rem;position:relative;padding-left:1rem}
-  .hero-sched li::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:6px;height:6px;border-radius:50%;background:var(--gold)}
-  .hero-sched .hs-date{font-family:'Gowun Batang',serif;font-weight:700;color:var(--gold-bright);min-width:148px}
-  .hero-sched .hs-venue{color:var(--cream)}
+  .hero-sched li{display:flex;align-items:center;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:1.55rem;position:relative;padding-left:1.4rem}
+  .hero-sched li::before{content:"";position:absolute;left:0;top:.8em;transform:translateY(-50%);width:9px;height:9px;border-radius:50%;background:var(--gold)}
+  .hero-sched .hs-date{font-family:'Gowun Batang',serif;font-weight:700;color:var(--gold-bright)}
+  .hero-sched .hs-venue{color:var(--cream);font-weight:700}
 
   .btn{
     display:inline-flex;align-items:center;gap:.6rem;
@@ -206,7 +206,7 @@
   }
   .sched-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.6}
   .sched-card:hover{transform:translateY(-6px);border-color:var(--gold-soft);box-shadow:0 16px 40px rgba(0,0,0,.4)}
-  .sched-card .date{font-family:'Gowun Batang',serif;font-weight:700;font-size:2.2rem;color:var(--gold-bright);margin:.2rem 0 .1rem;display:flex;align-items:center;justify-content:center;gap:.5rem}
+  .sched-card .date{font-family:'Gowun Batang',serif;font-weight:700;font-size:2.2rem;color:var(--gold-bright);margin:.2rem 0 .1rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.5rem;word-break:keep-all}
   .sched-card .date .dow{font-size:1rem;font-weight:400;color:var(--cream);background:rgba(216,177,90,.14);border:1px solid var(--line);border-radius:50%;width:2rem;height:2rem;display:inline-flex;align-items:center;justify-content:center;font-family:'Noto Sans KR'}
   .sched-card .day{font-size:.85rem;color:var(--cream-dim)}
   .sched-card .venue{margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid var(--line);font-size:1.3rem;color:var(--gold-bright);font-weight:700;font-family:'Gowun Batang',serif}
@@ -509,8 +509,7 @@
     </div>
     <div class="sched-grid">
       <div class="sched-card reveal">
-        <div class="date">11. 21 <span class="dow">토</span></div>
-        <div class="day">2026년 11월 21일 토요일</div>
+        <div class="date">2026년 11월 21일 (토요일)</div>
         <div class="venue">경기문화재단 아트홀</div>
       </div>
     </div>
